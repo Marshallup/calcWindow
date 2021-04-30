@@ -131,6 +131,7 @@ task("images", () => {
                 // quality: "medium",
               }),
               imagemin.svgo(),
+              // imageminPngquant(),
               imagemin.optipng({ optimizationLevel: 3 }),
               pngquant({
                 quality: [0.65, 0.7],

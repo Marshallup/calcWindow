@@ -1,60 +1,365 @@
 section.calculator
   h2.calculator__title Калькулятор
-  form.calculator-form
-    .calculator-form-two-card.calculator-form-header
+  .calculator-form
+    .calculator-form-cards-wrap.calculator-form-two-card.calculator-form-header
       .calculator-form-card.calculator-form-side.calculator-form-scantling
         h4.calculator-form-card__title Размеры изделия
         .calculator-form-card-body
           .calculator-form-scantling-input
             label.calculator-form-scantling-input__label Ширина:
             .calculator-form-scantling-input-item
-              span.calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__prefix от 20 см
+              span(data-number="20").calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__prefix от 20 см
               .calculator-form-scantling-input-item__elem-wrap
-                input(type="text").calculator-form-scantling-input-item__elem
+                input(min="20" max="240" type="number").calculator-form-scantling-input-item__elem
                 span.calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__elem-postfix см
-              span.calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__postfix до 180 см
+              span(data-number="180").calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__postfix до 180 см
           .calculator-form-scantling-input
             label.calculator-form-scantling-input__label Высота:
             .calculator-form-scantling-input-item
-              span.calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__prefix от 20 см
+              span(data-number="20").calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__prefix от 20 см
               .calculator-form-scantling-input-item__elem-wrap
                 input(type="text").calculator-form-scantling-input-item__elem
                 span.calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__elem-postfix см
-              span.calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__postfix до 240 см
+              span(data-number="240").calculator-form-scantling-input-item__prefix-postfix.calculator-form-scantling-input-item__postfix до 240 см
       .calculator-form-card.calculator-form-side.calculator-form-color
         h4.calculator-form-card__title Выбор цвета фурнитуры
         .calculator-form-card-body
-          .calculator-form-color-slider
-            .calculator-form-color-slider__item
-    .calculator-form-two-card
+          .calculator-form-color-slider-wrap
+            .calculator-form-color-slider
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color(style="background-color: #E7E8EC;")
+                  .calculator-form-color-slider-item__title Серебро
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color(style="background-color: #94949B;")
+                  .calculator-form-color-slider-item__title Серебро
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color(style="background-color: #36393F;")
+                  .calculator-form-color-slider-item__title Серебро
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color(style="background-color: #A57E52;")
+                  .calculator-form-color-slider-item__title Серебро
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color(style="background-color: #9B8E80;")
+                  .calculator-form-color-slider-item__title Серебро
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color(style="background-color: #94949B;")
+                  .calculator-form-color-slider-item__title Серебро
+              .calculator-form-color-slider-item
+                .calculator-form-color-slider-item-inner
+                  .calculator-form-color-slider-item__color.calculator-form-color-slider-item__color--active(style="background-color: #A57E52;")
+                  .calculator-form-color-slider-item__title Серебро
+    .calculator-form-cards-wrap.calculator-form-one-card.calculator-form-card-choise
+      .calculator-form-card
+        h4.calculator-form-card__title.calculator-form-card-choise__title
+          | Выбор материала
+          .calculator-form-card-choise-filter
+            span.calculator-form-card-choise-filter__text Фильтр
+            span.calculator-form-card-choise-filter__arrow
+        .calculator-form-card-body
+          .calculator-form-card-choise-filter-block
+            .calculator-form-card-choise-filter-cell
+              .calculator-form-card-choise-filter-cell-body--stretch
+                .calculator-form-card-choise-filter-category
+                  .calculator-form-card-choise-filter__title Ценовая категория
+                  .calculator-form-card-choise-filter-radio
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label Е
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 1
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 2
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 3
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 4
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 5
+                .calculator-form-card-choise-filter-bot
+                  label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
+                    .calculator-form-card-checkbox
+                      input(type="checkbox").calculator-form-card-checkbox__item
+                      span.calculator-form-card-checkbox__visible
+                    span.calculator-form-card-checkbox__label.checkbox-label--grey Блеск
+            .calculator-form-card-choise-filter-cell
+              .calculator-form-card-choise-filter-cell-body--stretch
+                .calculator-form-card-choise-filter-light
+                  .calculator-form-card-choise-filter__title Пропускание света
+                  .calculator-form-card-choise-filter-radio
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 0%
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 5%
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 45%
+                    .calculator-form-card-choise-filter-radio-item
+                      label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--bot
+                        .calculator-form-card-checkbox
+                          input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                          span.calculator-form-card-checkbox__visible
+                        span.calculator-form-card-checkbox__label 65%
+                .calculator-form-card-choise-filter-bot
+                  label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
+                    .calculator-form-card-checkbox
+                      input(type="checkbox").calculator-form-card-checkbox__item
+                      span.calculator-form-card-checkbox__visible
+                    span.calculator-form-card-checkbox__label.checkbox-label--grey Огнестойкость
+            .calculator-form-card-choise-filter-cell
+              .calculator-form-card-choise-filter-color
+                .calculator-form-card-choise-filter__title Цвет материала
+                .calculator-form-card-choise-filter-color-body
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/1.png", alt="1")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/2.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/3.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/4.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/5.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/1.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/2.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/3.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/4.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/5.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/1.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/2.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/3.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/4.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/5.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/1.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/2.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/3.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/4.png", alt="")
+                  .calculator-form-card-choise-filter-color__item
+                    img(src="./assets/img/colors/5.png", alt="")
+            .calculator-form-card-choise-filter-cell
+              .calculator-form-card-choise-filter-picture
+                .calculator-form-card-choise-filter__title Рисунок
+                .calculator-form-card-choise-filter-radio-bot
+                  .calculator-form-card-choise-filter-radio-item
+                    label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
+                      .calculator-form-card-checkbox
+                        input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                        span.calculator-form-card-checkbox__visible
+                      span.calculator-form-card-checkbox__label.checkbox-label--grey Без рисунка
+                  .calculator-form-card-choise-filter-radio-item
+                    label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
+                      .calculator-form-card-checkbox
+                        input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                        span.calculator-form-card-checkbox__visible
+                      span.calculator-form-card-checkbox__label.checkbox-label--grey Мелкоструктурные
+                  .calculator-form-card-choise-filter-radio-item
+                    label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
+                      .calculator-form-card-checkbox
+                        input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                        span.calculator-form-card-checkbox__visible
+                      span.calculator-form-card-checkbox__label.checkbox-label--grey С рисунком
+                  .calculator-form-card-choise-filter-radio-item
+                    label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
+                      .calculator-form-card-checkbox
+                        input(type="radio" name="control").calculator-form-card-checkbox__item#category
+                        span.calculator-form-card-checkbox__visible
+                      span.calculator-form-card-checkbox__label.checkbox-label--grey Светоотражающий слой
+          .calculator-form-card-choise-material
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/1.png", alt="1")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price 500 руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/2.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/3.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/4.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/1.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/1.png", alt="1")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price 500 руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/2.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/3.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/4.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+            .calculator-form-card-choise-material-item
+              .calculator-form-card-choise-material-item__img
+                img(src="./assets/img/colorMaterials/1.png", alt="2")
+              .calculator-form-card-choise-material-item-text
+                .calculator-form-card-choise-material-item-text__title АЛЬФА 0225 белый 200cm
+                .calculator-form-card-choise-material-item-text__price <span>500</span> руб
+          .calculator-form-card-choise-btns
+            button.calculator-form__btn.calculator-form__btn--yellow.calculator-form-card-choise__btn Показать ещё
+            button.calculator-form__btn.calculator-form__btn--ghost-white.calculator-form-card-choise__btn Показать всё
+    .calculator-form-cards-wrap.calculator-form-two-card
       .calculator-form-card
         h4.calculator-form-card__title Тип управления
         .calculator-form-card-body
           .calculator-form-card-checkboxes
-            .calculator-form-card-checkbox-wrap
+            label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
               .calculator-form-card-checkbox
-                input(type="checkbox").calculator-form-card-checkbox__item#manual
+                input(type="radio" name="control").calculator-form-card-checkbox__item#manual
                 span.calculator-form-card-checkbox__visible
-              label(for="manual").calculator-form-card-checkbox__label Ручное
-            .calculator-form-card-checkbox-wrap
+              span.calculator-form-card-checkbox__label Ручное
+            label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
               .calculator-form-card-checkbox
-                input(type="checkbox").calculator-form-card-checkbox__item#electro
+                input(type="radio" name="control").calculator-form-card-checkbox__item#electro
                 span.calculator-form-card-checkbox__visible
-              label(for="electro").calculator-form-card-checkbox__label Электропривод
+              span.calculator-form-card-checkbox__label Электропривод
       .calculator-form-card
         h4.calculator-form-card__title Способ монтажа
         .calculator-form-card-body
           .calculator-form-card-checkboxes
-            .calculator-form-card-checkbox-wrap
+            label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
               .calculator-form-card-checkbox
-                input(type="checkbox").calculator-form-card-checkbox__item#manual
+                input(type="radio" name="mount").calculator-form-card-checkbox__item#manual
                 span.calculator-form-card-checkbox__visible
-              label(for="manual").calculator-form-card-checkbox__label Скотч
-            .calculator-form-card-checkbox-wrap
+              span.calculator-form-card-checkbox__label Скотч
+            label.calculator-form-card-checkbox-wrap.calculator-form-card-checkbox-wrap--right
               .calculator-form-card-checkbox
-                input(type="checkbox").calculator-form-card-checkbox__item#electro
+                input(type="radio" name="mount").calculator-form-card-checkbox__item#electro
                 span.calculator-form-card-checkbox__visible
-              label(for="electro").calculator-form-card-checkbox__label Со сверлением рамы
+              span.calculator-form-card-checkbox__label Со сверлением рамы
+    .calculator-form-cards-wrap.calculator-form-one-card
+      .calculator-form-card
+        h4.calculator-form-card__title Итоговая комплектация
+        .calculator-form-card-body
+          .calculator-form-card-result-wrap
+            .calculator-form-card-result
+              .calculator-form-card-result-side
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Ширина: 
+                  span.calculator-form-card-result__val 20см
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Высота: 
+                  span.calculator-form-card-result__val 20см
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Цвет фурнитуры: 
+                  span.calculator-form-card-result__val.calculator-form-card-result__val-color
+                    img(src="./assets/img/colorMaterials/1.png", alt="1")
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Цвет материала: 
+                  span.calculator-form-card-result__val.calculator-form-card-result__val-color
+                    img(src="./assets/img/colors/2.png", alt="1")
+              .calculator-form-card-result-side
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Блеск 
+                  span.calculator-form-card-result__val
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Рисунок: 
+                  span.calculator-form-card-result__val без рисунка
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Тип управления: 
+                  span.calculator-form-card-result__val электропривод
+                .calculator-form-card-result-row
+                  span.calculator-form-card-result__key Способ монтажа: 
+                  span.calculator-form-card-result__val со сверлением рамы
+          .calculator-form-card-result-footer
+            .calculator-form-card-result-footer-block.calculator-form-card-result-footer-count
+              .calculator-form-card-result-footer-block__title.calculator-form-card-result-footer-count__title Количество
+              .calculator-form-card-result-footer-count-change
+                .calculator-form-card-result-footer-count-change__sign.calculator-form-card-result-footer-count-change__minus
+                .calculator-form-card-result-footer-count-change__number 3
+                .calculator-form-card-result-footer-count-change__sign.calculator-form-card-result-footer-count-change__plus
+            .calculator-form-card-result-footer-block.calculator-form-card-result-footer-total
+              .calculator-form-card-result-footer-block__title Итого:  
+              .calculator-form-card-result-footer-block__cost
+                span  62 400
+                | руб.
+            .calculator-form-card-result-footer-block.calculator-form-card-result-footer-btn
+              .calculator-form__btn.calculator-form__btn--yellow Заказать
+
+
 
 
 

@@ -13,6 +13,8 @@
         "google"
     ],
     "rules": {
+        "no-undef": "off",
+        "spaced-comment": "off",
         "no-console": [
             "error",
             {
